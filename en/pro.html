@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EMAIL LIST RESCUE KIT PRO · The Rescue Squad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(0.16 0.018 85);
+  --bg2: oklch(0.19 0.02 85);
+  --ink: oklch(0.94 0.01 70);
+  --muted: oklch(0.62 0.02 80);
+  --accent: oklch(0.78 0.11 85);
+  --line: oklch(0.30 0.02 85);
+  --disp:'Bricolage Grotesque',sans-serif;
+  --sans:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+body::before{
+  content:'';position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(40% 35% at 22% 20%, oklch(0.30 0.09 85/.5), transparent 70%),
+    radial-gradient(35% 40% at 80% 70%, oklch(0.24 0.05 60/.35), transparent 70%),
+    radial-gradient(30% 30% at 60% 10%, oklch(0.22 0.04 85/.4), transparent 70%);
+  animation:mesh 26s ease-in-out infinite alternate;
+}
+@keyframes mesh{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(2%,2%,0) scale(1.06)}}
+::selection{background:var(--accent);color:oklch(0.15 0.02 85)}
+em{font-style:italic;color:var(--accent)}
+b{font-weight:500;color:var(--ink)}
+a{color:inherit}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  padding:22px 4vw;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;mix-blend-mode:difference}
+nav .dot{color:var(--accent)}
+nav .right{display:flex;align-items:center;gap:16px}
+nav a.lang{color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 12px}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:0 4vw 10vh}
+.eye{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(38px,7.5vw,96px);line-height:.98;letter-spacing:-.02em;max-width:920px}
+.lede{margin-top:22px;max-width:540px;font-size:17px;color:var(--muted)}
+.scrollcue{position:absolute;right:4vw;bottom:10vh;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+
+section{position:relative;padding:16vh 4vw}
+.wrap{max-width:1180px;margin:0 auto}
+.k{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(30px,4.4vw,60px);line-height:1.05;letter-spacing:-.015em;margin-bottom:26px}
+.body-txt{max-width:62ch;color:var(--muted);font-size:17px}
+.body-txt b{color:var(--ink)}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:34px}
+.compare .col{background:var(--bg2);padding:26px}
+.compare .col.pro{background:oklch(0.20 0.03 85)}
+.compare .colhead{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.compare .col.pro .colhead{color:var(--accent)}
+.compare .col p{font-size:14px;color:var(--muted);margin-bottom:8px}
+.compare .col.pro p{color:var(--ink)}
+
+.lesson .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.law{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.law div{display:flex;gap:14px;font-size:15px;color:var(--muted)}
+.law div::before{content:'·';color:var(--accent);font-weight:700}
+.law b{color:var(--ink);font-weight:500}
+
+.kitcard{background:oklch(0.13 0.014 85);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.kitcard .bar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}
+.kitcard .bar span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.kititem{display:flex;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.kititem:last-child{border-bottom:none}
+.kititem .n{font-family:var(--mono);color:var(--accent);min-width:20px}
+.kititem b{display:block;font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:13px;margin-bottom:2px}
+.kititem span.d{color:var(--muted)}
+
+.pathrows{margin-top:10px;border-top:1px solid var(--line)}
+.pathrow{display:grid;grid-template-columns:110px 190px 1fr;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line)}
+.pathrow .pn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.pathrow .ph{font-family:var(--disp);font-weight:700;font-size:20px;text-transform:uppercase}
+.pathrow p{font-size:14px;color:var(--muted);margin:0}
+@media(max-width:700px){.pathrow{grid-template-columns:1fr}}
+
+.band{padding:22vh 4vw;text-align:center}
+.band h2{max-width:24ch;margin:0 auto}
+
+.rows{margin-top:10px;display:grid;gap:0;border-top:1px solid var(--line)}
+.rowitem{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.rowitem .rn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.rowitem .rq{font-family:var(--disp);font-weight:700;font-size:16px;margin-bottom:6px}
+.rowitem .ra{font-size:14px;color:var(--muted)}
+
+.reserve{text-align:center;padding:22vh 4vw}
+.price{font-family:var(--disp);font-weight:800;font-size:clamp(48px,8vw,88px);color:var(--accent);margin:20px 0}
+.price sup{font-size:.4em;vertical-align:top;color:var(--muted)}
+.cta{display:inline-block;margin-top:20px;font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+  border:1px solid var(--accent);color:var(--accent);padding:18px 44px;border-radius:999px;text-decoration:none;transition:.3s}
+.cta:hover{background:var(--accent);color:oklch(0.15 0.02 85)}
+.reserve .fine{margin-top:22px;font-size:13px;color:var(--muted)}
+
+footer{position:relative;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--muted)}
+footer::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(50% 90% at 50% 120%, oklch(0.35 0.12 85/.4), transparent 70%);
+  animation:aurora 9s ease-in-out infinite alternate}
+@keyframes aurora{from{opacity:.5;transform:translateX(-6%)}to{opacity:1;transform:translateX(6%)}}
+footer em{color:var(--accent);font-style:normal}
+
+@media(max-width:860px){.lesson .grid{grid-template-columns:1fr}.compare{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" style="text-decoration:none">THE RESCUE SQUAD<span class="dot"> ·</span> EMAIL LIST RESCUE KIT</a>
+  <div class="right"><span>PRO UPGRADE — $17</span><a class="lang" href="../pro.html">FR</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eye reveal">Commercial use · licensing · sales assets</div>
+    <h1 class="reveal">YOUR KIT. YOUR BRAND. YOUR CATALOG.</h1>
+    <p class="lede reveal">The core kit fixes your own list. The Pro upgrade gives you the right to sell the method — under your name, with your own clients.</p>
+  </div>
+  <div class="scrollcue">scroll to begin</div>
+</header>
+
+<section class="thesis" id="thesis">
+  <div class="wrap">
+    <div class="k reveal">Personal use vs. commercial use</div>
+    <h2 class="reveal">The core kit fixes. <em>Pro gives you the right to sell.</em></h2>
+    <p class="body-txt reveal">Without a license, you can apply the method to your own list. With Pro, you can resell it, rebrand it, and sell audits to clients.</p>
+    <div class="compare reveal">
+      <div class="col">
+        <div class="colhead">Core Kit — $10</div>
+        <p>Personal / internal use</p>
+        <p>Under Melody's brand (GPTs &amp; Bots)</p>
+        <p>Scorecard, Workbook, Prompts, Planners, Trackers</p>
+        <p>Goal: fix your own list</p>
+      </div>
+      <div class="col pro">
+        <div class="colhead">Pro Upgrade — $17</div>
+        <p>Commercial use (resale, services)</p>
+        <p>Full rebranding under your brand</p>
+        <p>License, sales templates, launch sequence</p>
+        <p>Goal: sell the kit or client audits</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lesson" id="kit">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="k reveal">What's inside the upgrade</div>
+        <h2 class="reveal">10 tools. <em>The commercial layer.</em></h2>
+        <p class="body-txt reveal">The legal framework, license, brand strategy, and marketing assets to commercialize the method.</p>
+        <div class="law reveal">
+          <div><b>Full rebranding:</b> name, visual identity, tone — no reference to Melody Wigdahl.</div>
+          <div><b>Clear licensing:</b> resale rights, client use, personal use.</div>
+          <div>Turns your initial purchase into a <b>revenue-generating commercial asset.</b></div>
+        </div>
+      </div>
+      <div class="kitcard reveal">
+        <div class="bar"><span>Contents · one-time upgrade</span></div>
+        <div class="kititem"><span class="n">01</span><div><b>Rebranding Guide</b><span class="d">Customize name, identity, and tone.</span></div></div>
+        <div class="kititem"><span class="n">02</span><div><b>Commercial-Use Framework</b><span class="d">Clear usage rights breakdown.</span></div></div>
+        <div class="kititem"><span class="n">03</span><div><b>License Template</b><span class="d">End-user license agreement template.</span></div></div>
+        <div class="kititem"><span class="n">04</span><div><b>Client-Use Models</b><span class="d">5 done-for-you service models.</span></div></div>
+        <div class="kititem"><span class="n">05</span><div><b>Pricing Architecture</b><span class="d">A full pricing grid for your offers.</span></div></div>
+        <div class="kititem"><span class="n">06</span><div><b>Naming &amp; Descriptions</b><span class="d">Name ideas and product sheets.</span></div></div>
+        <div class="kititem"><span class="n">07</span><div><b>Sales-Page Framework</b><span class="d">A complete sales page structure.</span></div></div>
+        <div class="kititem"><span class="n">08</span><div><b>5-Email Promo Pack</b><span class="d">Ready-to-use promo sequence.</span></div></div>
+        <div class="kititem"><span class="n">09</span><div><b>Social Promotional Copy</b><span class="d">Social media promo copy.</span></div></div>
+        <div class="kititem"><span class="n">10</span><div><b>Commercialization Checklist</b><span class="d">Step-by-step launch checklist.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lesson" id="models">
+  <div class="wrap">
+    <div class="k reveal">5 service models</div>
+    <h2 class="reveal">Sell the method. <em>Not just the file.</em></h2>
+    <p class="body-txt reveal" style="margin-bottom:40px">The Scorecard and Rescue Paths become a service you can bill for — not just a digital product.</p>
+    <div class="pathrows reveal">
+      <div class="pathrow"><span class="pn">DIY</span><span class="ph">Audit</span><p>You deliver the diagnosis, the client applies it.</p></div>
+      <div class="pathrow"><span class="pn">DWY</span><span class="ph">Done-With-You</span><p>Guided sessions, the client executes with you.</p></div>
+      <div class="pathrow"><span class="pn">DFY</span><span class="ph">Done-For-You</span><p>You run the protocol for the client.</p></div>
+      <div class="pathrow"><span class="pn">CONSULTING</span><span class="ph">Sessions</span><p>Implementation or advisory, billed per session.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <h2 class="reveal">A product under your brand. <em>Without starting from scratch.</em></h2>
+</section>
+
+<section id="objections">
+  <div class="wrap">
+    <div class="k reveal">Before you upgrade</div>
+    <h2 class="reveal">What you <em>should know</em></h2>
+    <div class="rows reveal">
+      <div class="rowitem"><span class="rn">01</span><div><div class="rq">Do I get the pre-written campaign emails?</div><div class="ra">No — the Campaign Vault (ready-to-send sequences) is sold separately. Pro gives you the architecture, license, and sales assets.</div></div></div>
+      <div class="rowitem"><span class="rn">02</span><div><div class="rq">Is the license legally binding?</div><div class="ra">It's an educational/commercial template, not formal legal advice — a working base you can have reviewed if needed.</div></div></div>
+      <div class="rowitem"><span class="rn">03</span><div><div class="rq">Is it ready to sell right away?</div><div class="ra">You'll need to adapt the branding and set up your own sales funnel — the framework does most of the heavy lifting.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve">
+  <div class="k reveal">One-time upgrade</div>
+  <h2 class="reveal">Unlock <em>the license.</em></h2>
+  <div class="price reveal"><sup>$</sup>17</div>
+  <a class="cta reveal" href="#">Unlock the Pro upgrade</a>
+  <p class="fine reveal">Adds to the core kit ($10) — required to resell, rebrand, or sell client audits.</p>
+</section>
+
+<footer><span>the rescue squad_ · pro upgrade · fictional training project</span></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+if (typeof gsap !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set('.hero > div:first-child > *',{y:50,opacity:0});
+  gsap.to('.hero > div:first-child > *',{y:0,opacity:1,duration:1.2,ease:'power3.out',stagger:0.12,delay:0.2});
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.closest('.hero')) return;
+    gsap.set(el,{opacity:0,y:40});
+    gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+}
+</script>
+</body>
+</html>

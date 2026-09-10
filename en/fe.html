@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EMAIL LIST RESCUE KIT · The Rescue Squad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(0.16 0.02 350);
+  --bg2: oklch(0.19 0.025 350);
+  --ink: oklch(0.94 0.01 60);
+  --muted: oklch(0.62 0.02 350);
+  --accent: oklch(0.68 0.23 355);
+  --gold: oklch(0.78 0.11 85);
+  --line: oklch(0.30 0.02 350);
+  --disp:'Bricolage Grotesque',sans-serif;
+  --sans:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+body::before{
+  content:'';position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(40% 35% at 22% 20%, oklch(0.30 0.10 350/.5), transparent 70%),
+    radial-gradient(35% 40% at 80% 70%, oklch(0.26 0.08 115/.35), transparent 70%),
+    radial-gradient(30% 30% at 60% 10%, oklch(0.24 0.05 350/.4), transparent 70%);
+  animation:mesh 26s ease-in-out infinite alternate;
+}
+@keyframes mesh{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(2%,2%,0) scale(1.06)}}
+::selection{background:var(--accent);color:oklch(0.15 0.02 350)}
+em{font-style:italic;color:var(--accent)}
+b{font-weight:500;color:var(--ink)}
+a{color:inherit}
+img{max-width:100%}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  padding:22px 4vw;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;mix-blend-mode:difference}
+nav .dot{color:var(--accent)}
+nav .right{display:flex;align-items:center;gap:16px}
+nav a.lang{color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 12px}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:0 4vw 10vh}
+.eye{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(40px,8vw,104px);line-height:.95;letter-spacing:-.02em;max-width:900px}
+.lede{margin-top:22px;max-width:520px;font-size:17px;color:var(--muted)}
+.scrollcue{position:absolute;right:4vw;bottom:10vh;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+
+section{position:relative;padding:16vh 4vw}
+.wrap{max-width:1180px;margin:0 auto}
+.k{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(32px,4.6vw,64px);line-height:1.04;letter-spacing:-.015em;margin-bottom:26px}
+.body-txt{max-width:62ch;color:var(--muted);font-size:17px}
+.body-txt b{color:var(--ink)}
+
+.thesis h2{max-width:20ch}
+
+.lesson .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.law{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.law div{display:flex;gap:14px;font-size:15px;color:var(--muted)}
+.law div::before{content:'·';color:var(--accent);font-weight:700}
+.law b{color:var(--ink);font-weight:500}
+
+.kitcard{background:oklch(0.13 0.014 350);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.kitcard .bar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}
+.kitcard .bar span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.kititem{display:flex;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.kititem:last-child{border-bottom:none}
+.kititem .n{font-family:var(--mono);color:var(--accent);min-width:20px}
+.kititem b{display:block;font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:13px;margin-bottom:2px}
+.kititem span.d{color:var(--muted)}
+.kititem.bonus b{color:var(--gold)}
+
+.pathrows{margin-top:10px;border-top:1px solid var(--line)}
+.pathrow{display:grid;grid-template-columns:60px 190px 1fr;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line)}
+.pathrow .pn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.pathrow .ph{font-family:var(--disp);font-weight:700;font-size:22px;text-transform:uppercase}
+.pathrow p{font-size:14px;color:var(--muted);margin:0}
+@media(max-width:700px){.pathrow{grid-template-columns:1fr}}
+
+.band{padding:22vh 4vw;text-align:center}
+.band h2{max-width:22ch;margin:0 auto}
+
+.spine{margin-top:10px;border-top:1px solid var(--line)}
+.spine div{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.spine .sn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.spine .sh{font-family:var(--disp);font-weight:700;color:var(--ink);font-size:15px}
+
+.rows{margin-top:10px;display:grid;gap:0;border-top:1px solid var(--line)}
+.rowitem{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.rowitem .rn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.rowitem .rq{font-family:var(--disp);font-weight:700;font-size:16px;margin-bottom:6px}
+.rowitem .ra{font-size:14px;color:var(--muted)}
+
+.reserve{text-align:center;padding:22vh 4vw}
+.price{font-family:var(--disp);font-weight:800;font-size:clamp(48px,8vw,88px);color:var(--accent);margin:20px 0}
+.price sup{font-size:.4em;vertical-align:top;color:var(--muted)}
+.cta{display:inline-block;margin-top:20px;font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+  border:1px solid var(--accent);color:var(--accent);padding:18px 44px;border-radius:999px;text-decoration:none;transition:.3s}
+.cta:hover{background:var(--accent);color:oklch(0.15 0.02 350)}
+.reserve .fine{margin-top:22px;font-size:13px;color:var(--muted)}
+
+footer{position:relative;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--muted)}
+footer::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(50% 90% at 50% 120%, oklch(0.35 0.15 355/.4), transparent 70%);
+  animation:aurora 9s ease-in-out infinite alternate}
+@keyframes aurora{from{opacity:.5;transform:translateX(-6%)}to{opacity:1;transform:translateX(6%)}}
+footer em{color:var(--accent);font-style:normal}
+
+@media(max-width:860px){.lesson .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" style="text-decoration:none">THE RESCUE SQUAD<span class="dot"> ·</span> EMAIL LIST RESCUE KIT</a>
+  <div class="right"><span>CORE OFFER — $10</span><a class="lang" href="../fe.html">FR</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eye reveal">Diagnose before treatment · 30-day protocol</div>
+    <h1 class="reveal">YOUR LIST ISN'T DEAD.</h1>
+    <p class="lede reveal">It's just being ignored. The rescue protocol for creators who stopped emailing their list after a flop — no starting over, no spamming.</p>
+  </div>
+  <div class="scrollcue">scroll to begin</div>
+</header>
+
+<section class="thesis" id="thesis">
+  <div class="wrap">
+    <div class="k reveal">What we learned about lists everyone thinks are done</div>
+    <h2 class="reveal">The problem is almost never the list. <em>It's the missing protocol.</em></h2>
+    <p class="body-txt reveal">A creator with 40,000 subscribers, ready to start over from zero. Diagnosis in one afternoon, protocol in 14 days, zero contacts deleted — open rate went from <b>0.8% to 22%</b> with no list purge.</p>
+  </div>
+</section>
+
+<section class="lesson" id="kit">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="k reveal">What's inside the kit</div>
+        <h2 class="reveal">8 tools. <em>One path at a time.</em></h2>
+        <p class="body-txt reveal">A 30-day implementation system to diagnose what's wrong with your list and apply a targeted strategy — without spreading yourself thin.</p>
+        <div class="law reveal">
+          <div><b>The one-path rule:</b> don't try to fix everything at once.</div>
+          <div>The Scorecard <b>mathematically isolates</b> your priority path.</div>
+          <div>Every tool is <b>reusable</b> across multiple lists or clients.</div>
+        </div>
+      </div>
+      <div class="kitcard reveal">
+        <div class="bar"><span>Contents · instant digital access</span></div>
+        <div class="kititem"><span class="n">01</span><div><b>Quick-Start Guide</b><span class="d">What to open, what to skip, where to start.</span></div></div>
+        <div class="kititem"><span class="n">02</span><div><b>Rescue Scorecard</b><span class="d">8-pillar diagnostic to isolate your right path.</span></div></div>
+        <div class="kititem"><span class="n">03</span><div><b>Complete Strategy Guide</b><span class="d">The full rescue protocol manual.</span></div></div>
+        <div class="kititem"><span class="n">04</span><div><b>84-Page Workbook</b><span class="d">Lead magnets, sequences, win-back campaigns.</span></div></div>
+        <div class="kititem"><span class="n">05</span><div><b>Master AI Prompt Vault</b><span class="d">Prompts for ChatGPT, Claude, and Gemini.</span></div></div>
+        <div class="kititem"><span class="n">06</span><div><b>30-Day Rescue Planner</b><span class="d">Day-by-day plan across the 4 paths.</span></div></div>
+        <div class="kititem"><span class="n">07</span><div><b>Tracker Pack</b><span class="d">Track campaigns, sources, buying signals.</span></div></div>
+        <div class="kititem"><span class="n">08</span><div><b>Checklist Pack</b><span class="d">Fast, ready-to-use reference checklists.</span></div></div>
+        <div class="kititem bonus"><span class="n">★</span><div><b>Bonus — List Revival AI Skill</b><span class="d">Diagnosis + segmentation + 5 win-back emails written.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lesson" id="paths">
+  <div class="wrap">
+    <div class="k reveal">The one-path rule</div>
+    <h2 class="reveal">Pick <em>one</em> problem. Not five.</h2>
+    <p class="body-txt reveal" style="margin-bottom:40px">The Scorecard reveals your priority path out of 4 — so you stop trying to fix everything at once.</p>
+    <div class="pathrows reveal">
+      <div class="pathrow"><span class="pn">01</span><span class="ph">Build</span><p>Attract the right subscribers — for lists you need to grow or strengthen.</p></div>
+      <div class="pathrow"><span class="pn">02</span><span class="ph">Warm</span><p>Rebuild the relationship — for neglected or irregularly emailed lists.</p></div>
+      <div class="pathrow"><span class="pn">03</span><span class="ph">Revive</span><p>Reconnect with the inactive — for cold, disengaged lists.</p></div>
+      <div class="pathrow"><span class="pn">04</span><span class="ph">Convert</span><p>Clarify the buying journey — for active lists that aren't selling.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <h2 class="reveal">8 tools. 1 protocol. <em>Zero guesswork.</em></h2>
+</section>
+
+<section class="lesson" id="scorecard">
+  <div class="wrap">
+    <div class="k reveal">Diagnose before you treat</div>
+    <h2 class="reveal">The Scorecard, <em>8 pillars.</em></h2>
+    <div class="spine reveal">
+      <div><span class="sn">1</span><span class="sh">Foundations</span></div>
+      <div><span class="sn">2</span><span class="sh">Subscriber quality</span></div>
+      <div><span class="sn">3</span><span class="sh">Consistency</span></div>
+      <div><span class="sn">4</span><span class="sh">Engagement</span></div>
+      <div><span class="sn">5</span><span class="sh">Relevance / Trust</span></div>
+      <div><span class="sn">6</span><span class="sh">Segmentation</span></div>
+      <div><span class="sn">7</span><span class="sh">Buying journey</span></div>
+      <div><span class="sn">8</span><span class="sh">List hygiene</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="objections">
+  <div class="wrap">
+    <div class="k reveal">Before you buy</div>
+    <h2 class="reveal">What you're <em>probably wondering</em></h2>
+    <div class="rows reveal">
+      <div class="rowitem"><span class="rn">01</span><div><div class="rq">My list is too old, too messy — nothing will save it?</div><div class="ra">The Scorecard objectively assesses your list's real state before any treatment. No blind diagnosis.</div></div></div>
+      <div class="rowitem"><span class="rn">02</span><div><div class="rq">Won't I lose even more subscribers if I re-engage?</div><div class="ra">The Revive path segments before it reaches out — never a blind mass send.</div></div></div>
+      <div class="rowitem"><span class="rn">03</span><div><div class="rq">I don't have time to learn a whole new system?</div><div class="ra">Ready-to-use checklists, trackers, and AI prompts — no theory to digest.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve">
+  <div class="k reveal">Instant digital access</div>
+  <h2 class="reveal">Get <em>the protocol.</em></h2>
+  <div class="price reveal"><sup>$</sup>10</div>
+  <a class="cta reveal" href="#">Get the protocol</a>
+  <p class="fine reveal">Works with ConvertKit, MailerLite, System.io, GoHighLevel — and ChatGPT, Claude, or Gemini for the prompts.</p>
+</section>
+
+<footer><span>the rescue squad_ · fictional training project</span></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+if (typeof gsap !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set('.hero > div:first-child > *',{y:50,opacity:0});
+  gsap.to('.hero > div:first-child > *',{y:0,opacity:1,duration:1.2,ease:'power3.out',stagger:0.12,delay:0.2});
+  document.querySelectorAll('.reveal').forEach(el=>{
+    if(el.closest('.hero')) return;
+    gsap.set(el,{opacity:0,y:40});
+    gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+}
+</script>
+</body>
+</html>
